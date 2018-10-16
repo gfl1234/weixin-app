@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="title">
+	<div class="close">
+		<a href="javascript:;" onClick="javascript:history.back(-1);">
+			<img src="/views/images/close.png" />
+		</a>
+	</div>
+	<h3>
+		充电记录
+	</h3>
+</div>
+<div class="content">
+	<div class="inbox">
+		<h2 class="h2tit">
+			充电明细
+		</h2>
+		<div class="time_cost">
+			<div class="left_time">
+				总用电： <span>100</span>h
+			</div>
+			<div class="right_cost">
+				总花费： <span>100</span>元
+			</div>
+		</div>
+		<ul class="list">
+			<li>
+				<div class="left_mes">
+					<p class="adress">
+						地址： <span>朝阳区将台路90-990-99</span></p>
+					<p class="num">
+						桩号： <span>12333</span>
+					</p>
+					<p>
+						时长： <span class="hour">2:45:00</span>
+					</p>
+					<p class="date">
+						日期： <span>2018-9-04  10:20:33</span>
+					</p>
+				</div>
+				<div class="right_hour">
+					5.55
+				</div>
+			</li>
+			<li>
+				<div class="left_mes">
+					<p class="adress">
+						地址： <span>朝阳区将台路90-990-99</span></p>
+					<p class="num">
+						桩号： <span>12333</span>
+					</p>
+					<p>
+						时长： <span class="hour">2:45:00</span>
+					</p>
+					<p class="date">
+						日期： <span>2018-9-04  10:20:33</span>
+					</p>
+				</div>
+				<div class="right_hour">
+					5.00
+				</div>
+			</li>
+			<li>
+				<div class="left_mes">
+					<p class="adress">
+						地址： <span>朝阳区将台路90-990-99</span></p>
+					<p class="num">
+						桩号： <span>12333</span>
+					</p>
+					<p>
+						时长： <span class="hour">4:45:33</span>
+					</p>
+					<p class="date">
+						日期： <span>2018-9-04  10:20:33</span>
+					</p>
+				</div>
+				<div class="right_hour">
+					5.10
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="footer">
+	<ul>
+		<li>
+			<a href="/views/add-power.html">
+				<img src="/views/images/f1.png">
+				<span>充电</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/fast-add.html">
+				<img src="/views/images/f2.png">
+				<span>快速充值</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/power-record.html">
+				<img src="/views/images/f_3.png">
+				<span class="current">充电记录</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/index.html">
+				<img src="/views/images/f4.png">
+				<span>我的</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+</body>
+<script type="text/javascript">
+
+// 	充电记录计算总花费js
+function count(){
+	var all = [];
+	var sum = 0;
+	$('.content .inbox .list li').each(function(){
+		var thisnum = Number($(this).find(".right_hour").text());
+		// alert(thisnum)
+		all.push(thisnum);
+	})
+	for(var i = 0;i<all.length;i++){
+		sum += all[i]
+	}
+	$('.content .inbox .time_cost .right_cost span').text(sum);
+}
+count()
+
+// 	充电记录计算总时长js
+function count2(){
+	var all = [];
+	var sum = 0;
+	$('.content .inbox .list li').each(function(){
+		var thisnum = $(this).find(".hour").text();
+		// alert(thisnum)
+		var hour = thisnum.split(':')[0];
+		var min = thisnum.split(':')[1];
+		var sec = thisnum.split(':')[2];
+		s = Number(hour*3600) + Number(min*60) + Number(sec);
+		all.push(s);
+		// alert(s)
+	})
+	for(var i = 0;i<all.length;i++){
+		sum += all[i];
+	}
+	num = sum/3600;
+	ans = num.toFixed(2)
+	$('.content .inbox .time_cost .left_time span').text(ans);
+}
+count2()
+
+</script>
+
+</html>

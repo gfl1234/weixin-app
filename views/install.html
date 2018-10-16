@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link type="text/css" rel="stylesheet" href="css/jeDate-test.css">
+<link type="text/css" rel="stylesheet" href="css/jedate.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jedate.js"></script>
+</head>
+
+<body class="mg_bot2">
+<div class="title">
+	<div class="close">
+		<a href="javascript:;" onClick="javascript:history.back(-1);">
+			<img src="/views/images/close.png" />
+		</a>
+	</div>
+	<h3>
+		申报安装
+	</h3>
+</div>
+
+<div class="content">
+	<div class="inbox">
+		<ul class="form_list">
+			<li>
+				<section class="express-area">
+					<a id="expressArea" href="javascript:void(0)">
+						<dl>
+							<dt>所在地区：</dt>
+							<dd>省 > 市 > 区/县</dd>
+						</dl>
+					</a>
+				</section>
+			</li>
+			<li>
+				<section class="express-area">
+					<dl>
+						<dt>地址：</dt>
+						<dd>
+							<input type="text" placeholder="请填写您的地址">
+						</dd>
+					</dl>
+				</section>
+			</li>
+			<li>
+				<section class="express-area">
+					<dl>
+						<dt>电桩数量：</dt>
+						<dd>
+							<input type="text" placeholder="请填写电桩数量">
+						</dt>
+					</dl>
+				</section>
+			</li>
+			<li>
+				<section class="express-area">
+					<dl>
+						<dt>手机号：</dt>
+						<dd>
+							<input type="text" placeholder="请填写您的手机号">
+						</dt>
+					</dl>
+				</section>
+			</li>
+			<li>
+				<section class="express-area">
+					<dl>
+						<div class="jeitem">
+			                <label class="jelabel">点击图标：</label>
+			                <div class="jeinpbox">
+			                    <input type="text" class="jeinput" id="testico" placeholder="年-月-日">
+			                    <div class="icons jebtns" onclick="jeDate('#testico',{trigger:false,format: 'YYYY-MM-DD'})"></div>
+			                </div>
+			            </div>
+					</dl>
+				</section>
+			</li>
+		</ul>
+		<div class="picture">
+			<div class="add_pic">
+				<a href="#">
+					<img src="/views/images/add.jpg">
+				</a>
+				<input type="file">
+			</div>
+			<p class="tex">
+				*  请拍摄周边环境的全景照片
+			</p>
+		</div>
+		<div class="tj tj_tj">
+			<input type="submit" value="提交">
+		</div>
+	</div>
+	
+</div>
+
+<div class="footer">
+	<ul>
+		<li>
+			<a href="/views/add-power.html">
+				<img src="/views/images/f1.png">
+				<span>充电</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/fast-add.html">
+				<img src="/views/images/f2.png">
+				<span>快速充值</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/power-record.html">
+				<img src="/views/images/f3.png">
+				<span>充电记录</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/index.html">
+				<img src="/views/images/f_4.png">
+				<span class="current">我的</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<section id="areaLayer" class="express-area-box">
+	<header>
+		<h3>选择地区</h3>
+		<a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+		<a id="closeArea" class="close" href="javascript:void(0)" title="关闭"></a>
+	</header>
+	<article id="areaBox">
+		<ul id="areaList" class="area-list"></ul>
+	</article>
+</section>
+<div id="areaMask" class="mask"></div>
+
+</body>
+<script type="text/javascript" src="js/jquery.area.js"></script>
+
+</html>

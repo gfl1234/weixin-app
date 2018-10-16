@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+
+<body class="bg_color">
+<div class="title">
+	<div class="close">
+		<a href="#">
+			<img src="/views/images/close.png" />
+		</a>
+	</div>
+	<h3>
+		充电
+	</h3>
+</div>
+
+<div class="search">
+	<div class="inbox">
+		<input type="text" placeholder="请输入充电桩编号">
+		<a href="#" class="sys">
+			<img src="/views/images/sys.png">
+		</a>
+	</div>
+</div>
+
+<div class="content">
+	<div class="dk">
+		<div class="inbox">
+			<h3 class="h3tit">
+				设备端口
+			</h3>
+			<ul>
+				<li>
+					<span class="num">1</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li>
+					<span class="num">2</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li>
+					<span class="num">3</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li>
+					<span class="num">4</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li>
+					<span class="num">5</span>
+					<span class="zt">空闲</span>
+				</li><li>
+					<span class="num">6</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li>
+					<span class="num">7</span>
+					<span class="zt">空闲</span>
+				</li>
+				<li class="current">
+					<span class="num">8</span>
+					<span class="zt">占用</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="sc">
+		<div class="inbox">
+			<h3 class="h3tit">
+				充电时长
+			</h3>
+			<ul>
+				<li class="current">
+					<a href="javascript:;" class="time"><span>1</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>2</span>小时</a>
+				</li>
+				<li> 
+					<a href="javascript:;" class="time"><span>3</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>4</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>5</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>6</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>7</span>小时</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="time"><span>8</span>小时</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="jbxx">
+		<div class="inbox">
+			<h3 class="h3tit">
+				基本信息
+			</h3>
+			<p class="ye">
+				当前余额
+				<span>0</span>
+			</p>
+			<p class="adress">
+				地址：
+				<span>北京市昌平区润丰欣尚小区4号楼599</span>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="tj">
+	<input type="button" value="提交">
+</div>
+<div class="footer">
+	<ul>
+		<li>
+			<a href="/views/add-power.html">
+				<img src="/views/images/f_1.png">
+				<span class="current">充电</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/fast-add.html">
+				<img src="/views/images/f2.png">
+				<span>快速充值</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/power-record.html">
+				<img src="/views/images/f3.png">
+				<span>充电记录</span>
+			</a>
+		</li>
+		<li>
+			<a href="/views/index.html">
+				<img src="/views/images/f4.png">
+				<span>我的</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+</body>
+
+<script type="text/javascript">
+	$('.sc ul li').on('click',function(){
+		$('.sc ul li').removeClass('current');
+		$(this).addClass('current');
+	})
+</script>
+
+</html>
